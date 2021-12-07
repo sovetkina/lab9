@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Лабораторная работа</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+	</head>
+	<body>
+		<script type="text/javascript">
+		function pii(){
+				var n=Number(document.forms["frm"].elements["n"].value);
+				var x=Number(document.forms["frm"].elements["x"].value);
+				var f;
+				var sum = 0;
+				for (i=0; i<=n; i++) {
+					f = Math.pow(-1,n)*Math.pow(x-1,n+1)/(n+1);
+					sum = sum + f;
+				}
+				alert(sum);
+			}	
+		</script>
+		<form id="frm">
+			<a>Введите число n</a><input type="text1" id="n">
+			<a>Введите число x</a><input type="text2" id="x">
+			<input type="submit" onclick="pii()" value="Отправить">
+		</form>
+
+		<?php
+		function pii(){
+			$n=$_POST['n'];
+			$x=$_POST['x'];
+			$f;
+			$sum=0;
+			for ($i=0; $i<=$n; $i++) {
+					$f = Math.pow(-1, $n)*Math.pow($x-1,$n+1)/($n+1);
+					sum = sum + $f;
+				}
+				echo $sum;
+		}
+		?>	
+		<form method="POST" action=" ">
+			<input type="text1" name="n">
+			<input type="text2" name="x">
+			<input type="submit" value="Отправить">
+		</form>
+	</body>
+</html>
