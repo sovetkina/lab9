@@ -3,7 +3,6 @@
 	<head>
 		<meta charset="utf-8">
 		<title>Лабораторная работа</title>
-		<link rel="stylesheet" type="text/css" href="style.css">
 	</head>
 	<body>
 		<form method="POST" action="">
